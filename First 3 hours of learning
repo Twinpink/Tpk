@@ -21,3 +21,9 @@ print(ai)
 space = " "
 bi = ai + space + xi
 print(bi)
+
+# 3.8.2022 testing input
+first = input("first")
+Second = input("Second")
+Summary = int(first) + int(Second)
+print(Summary)
