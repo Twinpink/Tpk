@@ -36,3 +36,150 @@ while command != "quit":
             print(dice_3)
             print("You won 60 points!")
             del dice_3
+18.9.2022
+A little bit repait of this program: Need to redo it again
+from random import randrange
+
+command = ""
+dice = 0
+dice_2 = 0
+dice_3 = 0
+point_6 = 6
+point = 0
+win_num = 4000
+answer = ""
+
+while command != "quit":
+    print('You can use "yes" to throw dice')
+    command = input("> ").lower()
+    if command == "yes":
+        dice = randrange(1, 7)
+        dice_2 = randrange(1, 7)
+        dice_3 = randrange(1, 7)
+        dice1 = print(f"dice1: {dice}")
+        dice2 = print(f"dice2: {dice_2}")
+        dice3 = print(f"dice3: {dice_3}")
+        answer = input('Do you want choose dices? (y/n) ')
+        if answer == "y":
+            print('Choose your dice with command: "dice1", "dice2", "dice3"')
+            choose = input("Choose your dice: ").lower()
+            choose = input("Choose your second dice: ").lower()
+            choose = input("Choose your third dice: ").lower()
+        elif answer == "n":
+            print('Ok, throw again')
+            dice = randrange(1, 7)
+            dice_2 = randrange(1, 7)
+            dice_3 = randrange(1, 7)
+            dice1 = print(f"dice1: {dice}")
+            dice2 = print(f"dice2: {dice_2}")
+            dice3 = print(f"dice3: {dice_3}")
+            choose = dice
+            choose = dice_2
+            choose = dice_3
+            if choose == dice1 and choose == dice2 and choose == dice_3:
+                dice = randrange(1, 7)
+                dice_2 = randrange(1, 7)
+                dice_3 = randrange(1, 7)
+                dice1 = print(f"dice1: {dice}")
+                dice2 = print(f"dice2: {dice_2}")
+                dice3 = print(f"dice3: {dice_3}")
+            elif choose == "none":
+                print('Okay throw again')
+            elif choose == dice1:
+                dice_2 = randrange(1, 7)
+                dice_3 = randrange(1, 7)
+                dice2 = print(f"dice2: {dice_2}")
+                dice3 = print(f"dice3: {dice_3}")
+                if dice1 == 1:
+                    point += 100
+                    print('You got 100 points')
+                elif dice1 == 2:
+                    point += 200
+                    print('You got 200 points')
+                elif dice1 == 3:
+                    point += 300
+                    print('You got 300 points')
+                elif dice1 == 4:
+                    point += 400
+                    print('You got 400 points')
+                elif dice1 == 5:
+                    point += 500
+                    print('You got 500 points')
+                elif dice1 == 6:
+                    point += 600
+                    print('You got 600 points')
+                elif choose == dice2:
+                    dice = randrange(1, 7)
+                    dice_3 = randrange(1, 7)
+                    dice = print(f"dice1: {dice}")
+                    dice3 = print(f"dice3: {dice_3}")
+                elif dice2 == 1:
+                    point += 100
+                    print('You got 100 points')
+                elif dice2 == 2:
+                    point += 200
+                    print('You got 200 points')
+                elif dice2 == 3:
+                    point += 300
+                    print('You got 300 points')
+                elif dice2 == 4:
+                    point += 400
+                    print('You got 400 points')
+                elif dice2 == 5:
+                    point += 500
+                    print('You got 500 points')
+                elif dice2 == 6:
+                    point += 600
+                    print('You got 600 points')
+                elif choose == dice3:
+                    dice = randrange(1, 7)
+                    dice_2 = randrange(1, 7)
+                    dice = print(f"dice1: {dice}")
+                    dice3 = print(f"dice2: {dice_2}")
+                elif dice3 == 1:
+                    point += 100
+                    print('You got 100 points')
+                elif dice3 == 2:
+                    point += 200
+                    print('You got 200 points')
+                elif dice3 == 3:
+                    point += 300
+                    print('You got 300 points')
+                elif dice3 == 4:
+                    point += 400
+                    print('You got 400 points')
+                elif dice3 == 5:
+                    point += 500
+                    print('You got 500 points')
+                elif dice3 == 6:
+                    point += 600
+                    print('You got 600 points')
+            print(f'Your points: {point}')
+        elif command == "quit":
+            print('Thanks for playing!!!')
+            break
+        else:
+            print("I don't understand that")
+
+            """
+
+            if dice == 6 and dice_2 == 6 and dice_3 == 6:
+                point += 600
+                print('You won 6000')
+
+            elif dice == 1 and dice_2 == 1 and dice_3 == 1:
+                point += 100
+                print('You won 100')
+            elif dice == 2 and dice_2 == 2 and dice_3 == 2:
+                point += 200
+                print('You won 200')
+            elif dice == 3 and dice_2 == 3 and dice_3 == 3:
+                point += 300
+                print('You won 300')
+            elif dice == 4 and dice_2 == 4 and dice_3 == 4:
+                point += 400
+                print('You won 400')
+            elif dice == 5 and dice_2 == 5 and dice_3 == 5:
+                point += 500
+                print('You won 500')
+            """
