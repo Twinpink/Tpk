@@ -232,3 +232,78 @@ while command != "quit":
                 print(f'Total: {total}')
     else:
         print("I don't understand that...")
+
+25.9.2022 11:00am
+
+from random import randrange
+
+command = ""
+dice = 0
+dice_2 = 0
+dice_3 = 0
+point = 0
+total = 0
+points = 0
+nasobek = 10
+win_num = 4000
+answer = ""
+
+while command != "quit":
+    print("y for throw")
+    command = input("> ").lower()
+    if command == "y":
+        dice = randrange(1, 7)
+        dice_2 = randrange(1, 7)
+        dice_3 = randrange(1, 7)
+        print(f"d1: {dice}")
+        print(f"d2: {dice_2}")
+        print(f"d3: {dice_3}")
+        command = input('How many dices you want to choose: ')
+        if command == "1":
+            choose = input('Which one?: ')
+            if choose == "d1":
+                if dice == 2 or 3 or 4 or 6 == False:
+                    print("You can't choose that")
+                elif dice == 1 or 5 == True:
+                    if dice == True:
+                        point = dice * nasobek
+                        total += point
+                        print(f'You get: {point}')
+                        print(f'Total: {total}')
+            elif choose == "d2":
+                if dice == 2 or 3 or 4 or 6 == False:
+                    print("You can't choose that")
+                elif dice == 1 or 5 == True:
+                    if dice == True:
+                        point = dice_2 * nasobek
+                        total += point
+                        print(f'You get: {point}')
+                        print(f'Total: {total}')
+            elif choose == "d3":
+                if dice == 2 or 3 or 4 or 6 == False:
+                    print("You can't choose that")
+                elif dice == 1 or 5 == True:
+                    if dice == True:
+                        point = dice_3 * nasobek
+                        total += point
+                        print(f'You get: {point}')
+                        print(f'Total: {total}')
+        elif command == "2":
+            choose = input("Which one?: ")
+            if choose == "d1, d2":
+                if dice == dice_2:
+                    nasobek = nasobek * 10
+                    if choose == "d1, d3":
+                        if dice == dice_3:
+                            nasobek = nasobek * 10
+                            if choose != "d2, d3":
+                                if dice_2 == dice_3:
+                                    nasobek = nasobek * 10
+                point = dice * nasobek
+                pointz = dice_2 * nasobek
+                points = dice_3 * nasobek
+                total += point + pointz + points
+                print(f'You get: {point} + {pointz} + {points}')
+                print(f'Total: {total}')
+    else:
+        print("I don't understand that...")
