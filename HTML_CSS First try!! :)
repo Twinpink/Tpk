@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="css_stranka.css">
+	<title>
+		První stránka
+	</title>
+</head>
+<body>
+	<header>
+		<h1 class="nadpis_facebook">Facebook</h1>
+	</header>
+<div class="nejakej_block">
+	<img src="box.jpg" class="boxik">
+
+	<h2 class="nej">Nejpoužívanější sociální síť</h2>
+
+	<p class="lorem">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Nullam at arcu a est sollicitudin euismod. Phasellus et lorem id felis nonummy placerat. Integer pellentesque quam vel velit. Sed ac dolor sit amet purus malesuada congue. Nulla non lectus sed nisl molestie malesuada. Nam sed tellus id magna elementum tincidunt. Curabitur sagittis hendrerit ante. Mauris dictum facilisis augue. Sed convallis magna eu sem. Nullam rhoncus aliquam metus. Praesent vitae arcu tempor neque lacinia pretium.</p>
+
+	<h2 class="zaregistruj">Zaregistruj se a začni facebookovat</h2>
+
+	<input placeholder="Jméno", class="jmeno">
+	<input placeholder="Příjmení", class="surname">
+
+
+</div>
+</body>
+</html>
+
+-------------------------------
+
+Css
+
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+.nadpis_facebook{
+	border-color: blue;
+	border-style: solid;
+	border: 3px;
+	position: relative;
+	text-align: center;
+	margin: 0px;
+	background: #4267B2;
+	color: white;
+	margin-left: 200px;
+	margin-right: 200px;
+}
+
+.block{
+	display: block;
+}
+.nej{
+	position: relative;
+	text-align: center;
+	color: blue;
+	margin-left: 200px;
+	margin-right: 200px;
+}
+.boxik{
+
+	height: 200px;
+	margin-top: 20px;
+}
+.nejakej_block{
+	text-align: center;
+}
+
+.lorem{
+	display: block;
+	text-align: left;
+	margin-left: 200px;
+	margin-right: 200px;
+	background: #4267B2;
+	margin-top: 20px;
+	color: white;
+	padding: 8px;
+}
+
+.zaregistruj{
+	position: relative;
+	text-align: center;
+	color: blue;
+	margin-left: 200px;
+	margin-right: 200px;
+	margin-top: 20px;
+}
+.jmeno{
+	margin-top: 30px;
+	text-align: center;
+	padding: 10px;
+	border-radius: 5px;
+}
+.surname{
+	margin-top: 30px;
+	text-align: center;
+	padding: 10px;
+	border-radius: 5px;
+
+}
